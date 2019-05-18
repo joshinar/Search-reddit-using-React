@@ -19,10 +19,11 @@ export default class SearchForm extends Component {
       sortBy: e.target.value
     });
   };
+
   onSubmit = async e => {
     e.preventDefault();
     let getSearch = await fetch(
-      `http://www.reddit.com/search.json?q=${this.state.searchTerm}&limit=${
+      `https://www.reddit.com/search.json?q=${this.state.searchTerm}&limit=${
         this.state.limit
       }&sortby=${this.state.sortBy}`
     );
